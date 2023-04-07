@@ -44,6 +44,11 @@ footer {
     width: 100%;
     position: fixed;
     font-weight: bold;
+    height: 7vh;
+}
+
+html {
+    width: 100%;
 }
 
 img {
@@ -55,7 +60,7 @@ nav {
     color: var(--text-color);
     padding: 10px;
     text-align: end;
-    font-size: 1em;
+    font-size: 0.75em;
     font-weight: bold;
     letter-spacing: 0.1em;
     top: 0;
@@ -104,10 +109,8 @@ table {
     width: 50%;
 }
 
-td {
-    height: 80px;
-    width: 80px;
-    text-align: center;
+ul {
+    padding-left: 0;
 }
 
 .fa-brands,
@@ -170,19 +173,68 @@ td {
     padding: 10px;
 }
 
-#main {
-    padding-top: 300px;
-    text-align: center;
+#about-me {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
 }
 
-#skills {
+#main {
+    padding-top: 150px;
+    text-align: center;
+    width: 100vw;
+    height: 75vh;
+}
+
+#main > div {
+    max-height: 100%;
+    overflow: scroll;
+}
+
+#skills1,
+#skills2 {
     cursor: pointer;
 }
 
-#skills_text td {
+#skills1 td {
+    width: 50px;
+    height: 80px;
+}
+
+#skills1_text td,
+#skills2_text td {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.2s ease-in-out;
     vertical-align: top;
     color: var(--five);
+    height: 50px;
+}
+
+#wrapper {
+    width: 100vw;
+}
+
+@media (min-width: 800px) {
+    #about-me {
+        width: 60%;
+        display: flex;
+        justify-content: between;
+    }
+
+    #about-me > img {
+        width: 45%;
+        margin: 0 auto;
+        align-self: center;
+    }
+
+    #about-me > div {
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    #main > div {
+        overflow: unset;
+        padding-top: 20vh;
+    }
 }
