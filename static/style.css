@@ -46,6 +46,10 @@ footer {
     font-weight: bold;
 }
 
+img {
+    border-radius: 5%;
+}
+
 nav {
     background-color: transparent;
     color: var(--text-color);
