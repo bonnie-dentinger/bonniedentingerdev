@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 :root {
-    --text-color: white;
+    --text-color: black;
     --one: #F4E9E8;
     --two: #DBC9CE;
     --three: #BCABB9;
     --four: #9791A7;
     --five: #6A7993;
     --six: #38637A;
-    --gold: #FFEECB;
+    --purple: #DB88FF;
 }
 
 a {
@@ -17,15 +17,16 @@ a {
 }
 
 a:hover {
-    color: var(--five);
+    color: #4A0070;
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     background-color: #fff;
     color: var(--text-color);
     margin: 0;
-    background-image: linear-gradient(to right top, var(--one), var(--two), var(--three), var(--four), var(--five), var(--six));
+    background: linear-gradient(180deg, #FFB7B7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #FFD1D1 0%, #260000 100%), linear-gradient(238.72deg, #FFDDDD 0%, #720066 100%), linear-gradient(127.43deg, #00FFFF 0%, #FF4444 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, #B7D500 0%, #3300FF 100%);
+    background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge, normal;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -37,7 +38,6 @@ body {
 
 footer {
     background-color: transparent;
-    color: var(--six);
     padding: 10px;
     bottom: 0;
     left: 0;
@@ -52,7 +52,7 @@ html {
 }
 
 img {
-    border-radius: 5%;
+    border-radius: 15px;
 }
 
 nav {
@@ -84,13 +84,13 @@ nav a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--two);
+    background-color: white;
     transition: transform 0.3s ease-in-out 0s;
     transform-origin: bottom right;
 }
 
 nav a:hover {
-    color: var(--two);
+    color: white;
 }
 
 nav a:hover::after {
@@ -113,17 +113,33 @@ ul {
     padding-left: 0;
 }
 
+.dot.active,
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgba(255, 255, 255, 0.50);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
 .fa-brands,
-.bi {
+.fa-regular {
     padding: 10px;
     font-size: 1.5em;
-    transition: font-size 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     margin: 0 10px;
 }
 
 .fa-brands:hover,
-.bi:hover {
-    font-size: 2em;
+.fa-regular:hover {
+    transform: scale(1.5);
 }
 
 .fa-message,
@@ -157,8 +173,8 @@ ul {
     }
 }
 
-.gold {
-    color: var(--gold);
+.purple {
+    color: var(--purple);
 }
 
 .line {
@@ -173,6 +189,45 @@ ul {
     padding: 10px;
 }
 
+.slideshow {
+    position: relative;
+    margin: auto;
+}
+
+.slide:not(:first-child) {
+    display: none;
+}
+
+.previous,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previous {
+    left: 0;
+}
+
+.previous:hover,
+.next:hover {
+    transform: scale(1.5);
+}
+
 #about-me {
     width: 80%;
     margin: 0 auto;
@@ -180,15 +235,22 @@ ul {
 }
 
 #main {
-    padding-top: 150px;
+    padding-top: 5vh;
     text-align: center;
     width: 100vw;
     height: 75vh;
+    display: flex;
+    justify-content: center;
 }
 
-#main > div {
+#main-content {
     max-height: 100%;
     overflow: scroll;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    border-radius: 15px;
 }
 
 #skills1,
@@ -207,7 +269,7 @@ ul {
     opacity: 0;
     transition: visibility 0s, opacity 0.2s ease-in-out;
     vertical-align: top;
-    color: var(--five);
+    color: #4A0070;
     height: 50px;
 }
 
@@ -217,15 +279,14 @@ ul {
 
 @media (min-width: 800px) {
     #about-me {
-        width: 60%;
         display: flex;
         justify-content: between;
     }
 
     #about-me > img {
         width: 45%;
-        margin: 0 auto;
         align-self: center;
+        margin: 0 auto;
     }
 
     #about-me > div {
@@ -233,8 +294,29 @@ ul {
         margin: 0 auto;
     }
 
-    #main > div {
-        overflow: unset;
-        padding-top: 20vh;
+    #main-content {
+        padding-top: 2vh;
+        margin-top: 10vh;
+        height: fit-content;
+        min-height: 60vh;
+        max-height: 80vh;
+        overflow: hidden;
     }
+
+    /* scrollbar with transparent background, white thumb, and border radius*/
+
+    #main-content::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+    }
+
+    #main-content::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    #main-content::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
 }

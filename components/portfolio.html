@@ -1,4 +1,73 @@
-<div class="fade-in">
-    <p style="margin-top: 50px;"><strong>Portfolio</strong></p>
-    <p>Coming Soon</p>
+<div class="fade-in" id="main-content">
+    <h1><strong>Portfolio</strong></h1>
+    <div class="slideshow">
+        <div class="slide">
+            <img src="/static/img/prismx_preview.png" alt="PrismX" style="margin: 0 auto;width: 80%;">
+            <p><strong>PrismX</strong></p>
+            <a href="https://github.com/bonnie-dentinger/prismx" target="_blank">View the source code <i class="fa-brands fa-github"></i></a>
+            <p>
+                This website was a project for my Web Programming class. It is a website for a fictional company called PrismX, which helps provide exercises
+                that help with identifying color-blindness. The website is built using HTML, CSS, JavaScript, FuelPHP, and MySQL and uses an API to generate
+                color names. There is also functionality that allows the user to view a "printable" version of what they have created. 
+            </p>
+        </div>
+        <div class="slide">
+            <img src="/static/img/prismx_prevew2.png" alt="PrismX2" style="margin: 0 auto;width: 80%;">
+            <p><strong>PrismX</strong></p>
+            <a href="https://github.com/bonnie-dentinger/prismx" target="_blank">View the source code <i class="fa-brands fa-github"></i></a>
+            <p>
+                The user starts by choosing any number of columns and rows (between 1 and 26), as well as colors (between 1 and 6). There is validation built in
+                to verify that the user has entered a valid number and alerts the user if there is invalid entry.
+            </p>
+        </div>
+        <div class="slide">
+            <img src="/static/img/prismx_prevew3.png" alt="PrismX3" style="margin: 0 auto;width: 80%;">
+            <p><strong>PrismX</strong></p>
+            <a href="https://github.com/bonnie-dentinger/prismx" target="_blank">View the source code <i class="fa-brands fa-github"></i></a>
+            <p>
+                The user can also select a specific color, and "color" the squares created in the grid below, which was generated using the number of columns 
+                and rows selected by the user, by clicking on the squares. If the color is edited, then the colored squares will change to the new color. If 
+                the color is deleted, then the colored squares will empty.
+            </p>
+        </div>
+        <div class="slide">
+            <img src="/static/img/prismx_prevew4.png" alt="PrismX4" style="margin: 0 auto;width: 80%;">
+            <p><strong>PrismX</strong></p>
+            <a href="https://github.com/bonnie-dentinger/prismx" target="_blank">View the source code <i class="fa-brands fa-github"></i></a>
+            <p>
+                The user can then choose to edit, add, or delete colors as they choose. This is an example of adding a new color. The modals for adding, deleting,
+                and editing were almost completely built using custom CSS and Javascript, beyond the base of Bootstrap modals.
+            </p>
+        </div>
+        <div class="slide">
+            <img src="/static/img/prismx_prevew5.png" alt="PrismX5" style="margin: 0 auto;width: 80%;">
+            <p><strong>PrismX</strong></p>
+            <a href="https://github.com/bonnie-dentinger/prismx" target="_blank">View the source code <i class="fa-brands fa-github"></i></a>
+            <p>
+                An example of coloring the squares using a couple of chosen colors.
+            </p>
+        </div>
+        <div class="slide">
+            <img src="/static/img/prismx_prevew6.png" alt="PrismX6" style="margin: 0 auto;width: 80%;">
+            <p><strong>PrismX</strong></p>
+            <a href="https://github.com/bonnie-dentinger/prismx" target="_blank">View the source code <i class="fa-brands fa-github"></i></a>
+            <p>
+                This is the "printable" view. The user can choose to print the page, which will print the grid as well as the colors used and which columns and
+                rows were selected, battleship-style. The goal is top help the user use the color instructed to color in the squares.
+            </p>
+        </div>
+        <a class="previous" onclick="plusSlides(-1)"><i class="fa-light fa-chevron-left"></i></a>
+        <a class="next" onclick="plusSlides(1)"><i class="fa-light fa-chevron-right"></i></a>
+    </div>
+    <div style="text-align:center">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
 </div>
+<script>
+    currentSlide(1);
+</script>
