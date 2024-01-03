@@ -1,14 +1,20 @@
 
 function showBrandName(brand_name) {
     brand_name = document.getElementById(brand_name);
+    brand_name.classList.remove("fade-out");
+    brand_name.classList.add("fade-in");
     brand_name.style.visibility = "visible";
     brand_name.style.opacity = "1";
 }
 
 function hideBrandName(brand_name) {
     brand_name = document.getElementById(brand_name);
-    brand_name.style.visibility = "hidden";
-    brand_name.style.opacity = "0";
+    brand_name.classList.remove("fade-in");
+    brand_name.classList.add("fade-out");
+    setTimeout(function() {
+        brand_name.style.visibility = "hidden";
+        brand_name.style.opacity = "0";
+    }, 500);
 }
 
 function includeHTML() {

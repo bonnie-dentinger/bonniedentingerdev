@@ -1,42 +1,57 @@
 <div class="fade-in" id="main-content">
     <h1>Bonnie Dentinger</h1>
     <h2>Full-Stack Web Developer</h2>
-    <p>Hi, I'm Bonnie Dentinger, a web developer living in Daphne, Alabama.</p>
+    <p>
+        Welcome to my portfolio, where I showcase my passion for crafting exceptional digital experiences. 
+    </p>
     <p>Check out my <a class="purple" href="#" onclick="loadHTML('/components/portfolio.html');">portfolio</a> to see some of my work.</p>
     <p>Feel free to <a class="purple" href="#" onclick="loadHTML('/components/contact.html');">contact</a> me with any questions.</p>
-    <!--<i class="fa-brands fa-linkedin"></i>-->
-    <a href="https://github.com/bonnie-dentinger"><i class="fa-brands fa-github"></i></a><br>
+    <a href="https://www.linkedin.com/in/bonnie-dentinger/" target="_blank" title="View my LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/bonnie-dentinger" target="_blank" title="View my GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.canva.com/design/DAFfMLirkgk/qjxJ7Itlg37m4xMRiThaTw/view?utm_content=DAFfMLirkgk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+        target="_blank" title="View my resume"><i class="fa-regular fa-file-user"></i></a>
+    <br>
     <div class="line"></div>
-    <table>
-        <tbody>
-            <tr id="skills1">
-                <td onmouseenter="showBrandName('python');" onmouseleave="hideBrandName('python');"><a href="https://www.python.org/"><i class="fa-brands fa-python"></i></a></td>
-                <td onmouseenter="showBrandName('php');" onmouseleave="hideBrandName('php');"><a href="https://www.php.net/"><i class="fa-brands fa-php"></i></a></td>
-                <td onmouseenter="showBrandName('css');" onmouseleave="hideBrandName('css');"><a href="https://www.w3schools.com/css/"><i class="fa-brands fa-css3"></i></a></td>
-                <td onmouseenter="showBrandName('html');" onmouseleave="hideBrandName('html');"><a href="https://www.w3schools.com/html/"><i class="fa-brands fa-html5"></i></a></td>
-                <td onmouseenter="showBrandName('js');" onmouseleave="hideBrandName('js');"><a href="https://www.w3schools.com/js/"><i class="fa-brands fa-js"></i></a></td>
-            </tr>
-            <tr id="skills1_text">
-                <td id="python">Python</td>
-                <td id="php">PHP</td>
-                <td id="css">CSS</td>
-                <td id="html">HTML</td>
-                <td id="js">JavaScript</td>
-            </tr>
-            <tr id="skills2">
-                <td onmouseenter="showBrandName('react');" onmouseleave="hideBrandName('react');"><a href="https://react.dev"><i class="fa-brands fa-react"></i></a></td>
-                <td onmouseenter="showBrandName('node');" onmouseleave="hideBrandName('node');"><a href="https://nodejs.org"><i class="fa-brands fa-node"></i></a></td>
-                <td onmouseenter="showBrandName('bootstrap');" onmouseleave="hideBrandName('bootstrap');"><a href="https://getbootstrap.com/"><i class="fa-brands fa-bootstrap"></i></a></td>
-                <td onmouseenter="showBrandName('docker');" onmouseleave="hideBrandName('docker');"><a href="https://www.docker.com"><i class="fa-brands fa-docker"></i></a></td>
-                <td onmouseenter="showBrandName('dbms');" onmouseleave="hideBrandName('dbms');"><a href=""><i class="fa-regular fa-database"></i></a></td>
-            </tr>
-            <tr id="skills2_text">
-                <td id="react">React</td>
-                <td id="node">Node</td>
-                <td id="bootstrap">Bootstrap</td>
-                <td id="docker">Docker</td>
-                <td id="dbms">DBMS</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row row-cols-auto">
+        <div class="col" onmouseenter="showBrandName('python');" onmouseleave="hideBrandName('python');">
+            <i class="fa-brands fa-python"></i>
+            <p class="brand-name" id="python">Python</p>
+        </div>
+        <div class="col" onmouseenter="showBrandName('php');" onmouseleave="hideBrandName('php');">
+            <i class="fa-brands fa-php"></i>
+            <p class="brand-name" id="php">PHP</p>
+        </div>
+        <div class="col" onmouseenter="showBrandName('css');" onmouseleave="hideBrandName('css');">
+            <i class="fa-brands fa-css3"></i>
+            <p class="brand-name" id="css">CSS</p>
+        </div>
+        <div class="col" onmouseenter="showBrandName('html');" onmouseleave="hideBrandName('html');">
+            <i class="fa-brands fa-html5"></i>
+            <p class="brand-name" id="html">HTML</p>
+        </div>
+        <div class="col" onmouseenter="showBrandName('js');" onmouseleave="hideBrandName('js');">
+            <i class="fa-brands fa-js"></i>
+            <p class="brand-name" id="js">JavaScript</p>
+        </div>
+        <div class="col" onmouseenter="showBrandName('react');" onmouseleave="hideBrandName('react');">
+            <i class="fa-brands fa-react"></i>
+            <p class="brand-name" id="react">React</p>
+        </div>
+        <div class="col" onmouseenter="showBrandName('node');" onmouseleave="hideBrandName('node');">
+            <i class="fa-brands fa-node"></i>
+            <p class="brand-name" id="node">Node</p>
+        </div>
+        <div class="col" onmouseenter="showBrandName('bootstrap');" onmouseleave="hideBrandName('bootstrap');">
+            <i class="fa-brands fa-bootstrap"></i>
+            <p class="brand-name" id="bootstrap">Bootstrap</p>
+        </div>
+        <div class="col" onmouseenter="showBrandName('docker');" onmouseleave="hideBrandName('docker');">
+            <i class="fa-brands fa-docker"></i>
+            <p class="brand-name" id="docker">Docker</p>
+        </div>
+        <div class="col" onmouseenter="showBrandName('dbms');" onmouseleave="hideBrandName('dbms');">
+            <i class="fa-regular fa-database"></i>
+            <p class="brand-name" id="dbms">DBMS</p>
+        </div>
+    </div>
 </div>
